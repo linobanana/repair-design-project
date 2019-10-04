@@ -1,0 +1,41 @@
+$bcg-light: #fff;
+$bcg-dark: #131313;
+@mixin wrapper {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    display: flex;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.page-header {
+    height: 83px;
+    background-color: $bcg-dark;
+    .wrapper {
+        @include wrapper;
+    }
+}
+
+.page-main {
+    .wrapper {
+        @include wrapper;
+    }
+    .home {
+        height: 755px;
+        background-color: $bcg-dark;
+        .instagram {
+            width: 6%;
+            height: 80%;
+        }
+        .main-image {
+            background-image: url(./assets/main-image.svg);
+            width: 94%;
+            background-repeat: no-repeat;
+        }
+    }
+}
+
