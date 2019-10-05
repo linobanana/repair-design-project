@@ -12,11 +12,18 @@ $bcg-dark: #131313;
     padding: 0;
 }
 
+body {
+    background-color: $bcg-dark;
+}
+
 .page-header {
     height: 83px;
     background-color: $bcg-dark;
     .wrapper {
         @include wrapper;
+    }
+    @media screen and (max-width: 375px) {
+        height: 57px;
     }
 }
 
@@ -24,18 +31,166 @@ $bcg-dark: #131313;
     .wrapper {
         @include wrapper;
     }
+    @media screen and (max-width: 375px) {
+        .wrapper {
+            width: 95%;
+        }
+    }
     .home {
         height: 755px;
         background-color: $bcg-dark;
+        .wrapper {
+            width: 100%;
+        }
         .instagram {
             width: 6%;
             height: 80%;
+            @media screen and (max-width: 375px) {
+                display: none;
+            }
         }
         .main-image {
             background-image: url(./assets/main-image.svg);
             width: 94%;
             background-repeat: no-repeat;
+            background-size: 100% auto;
+            @media screen and (max-width: 375px) {
+                width: 100%;
+                background-size: auto 100%;
+                background-position-x: center;
+            }
+        }
+        @media screen and (max-width: 375px) {
+            height: 476px;
+        }
+    }
+    .projects {
+        height: 662px;
+        background-color: $bcg-dark;
+        @media screen and (max-width: 375px) {
+            height: 697px;
+        }
+    }
+    .online-control {
+        height: 1060px;
+        background: linear-gradient(to bottom, #131313 0%, #131313 33%, #fff 33%, #fff 100%);
+        &::before {
+            content: '';
+            height: 350px;
+            width: 100%;
+            background-image: url(./assets/town.svg);
+            position: absolute;
+            background-repeat: repeat-x;
+            background-position-y: bottom;
+            opacity: 0.05;
+        }
+        @media screen and (max-width: 375px) {
+            height: 856px;
+            background: $bcg-dark; 
+            &::before {
+                display: none;
+            }
+        }
+    }
+    .services {
+        height: 900px;
+        background-color: $bcg-light;
+        @media screen and (max-width: 375px) {
+            height: 1809px;
+        }
+        @media screen and (min-width: 1441px) {
+            margin-top: -1px;
+        }
+    }
+    .measurement {
+        height: 981px;
+        background-color: $bcg-light;
+        @media screen and (max-width: 375px) {
+            display: none;
+        }
+        @media screen and (min-width: 1441px) {
+            margin-top: -2px;
+        }
+    }
+    .repair-styles {
+        height: 864px;
+        background-image: url(./assets/repair-styles.svg);
+        background-repeat: no-repeat;
+        background-size: 100% auto;
+        @media screen and (max-width: 375px) {
+            height: 375px;
+            background: linear-gradient(to bottom, #fff 0%, #fff 59%, #131313 59%, #131313 100%);
+        }
+    }
+    .design-projects {
+        height: 1075px;
+        background: linear-gradient(to bottom, #fff 0%, #fff 58%, #131313 58%, #131313 100%);
+        @media screen and (max-width: 375px) {
+            height: 1770px;
+            background: $bcg-dark;
+        }
+    }
+    .plan-of-repair {
+        height: 720px;
+        background-color: $bcg-dark;
+        @media screen and (max-width: 375px) {
+            display: none;
+        }
+    }
+    .team {
+        height: 900px;
+        background: linear-gradient(to bottom, #131313 0%, #131313 49%, #fff 49%, #fff 100%);
+        @media screen and (max-width: 375px) {
+            height: 1705px;
+            background: $bcg-dark;
+        }
+    }
+    .review {
+        height: 800px;
+        background-color: $bcg-light;
+        @media screen and (max-width: 375px) {
+            display: none;
+        }
+        @media screen and (min-width: 1441px) {
+            margin-top: -2px;
+        }
+    }
+    .contacts {
+        height: 1217px;
+        background-image: url(./assets/contacts-bg.png);
+        background-repeat: no-repeat;
+        background-position-y: bottom;
+        background-color: $bcg-light;
+        &::before {
+            content: '';
+            height: 261px;
+            width: 100%;
+            background-image: url(./assets/town.svg);
+            position: absolute;
+            background-repeat: repeat-x;
+            background-position-y: bottom;
+            opacity: 0.05;
+        }
+        @media screen and (max-width: 375px) {
+            &::before {
+                display: none;
+            }
+            background: $bcg-dark;
+            height: 1051px;
+        }
+        @media screen and (min-width: 1441px) {
+            margin-top: -2px;
         }
     }
 }
 
+.page-footer {
+    height: 133px;
+    background-color: $bcg-dark;
+    .wrapper {
+        @include wrapper;
+    }
+    @media screen and (max-width: 375px) {
+        display: none;
+    }
+}

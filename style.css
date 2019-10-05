@@ -3,6 +3,10 @@
   padding: 0;
 }
 
+body {
+  background-color: #131313;
+}
+
 .page-header {
   height: 83px;
   background-color: #131313;
@@ -17,6 +21,12 @@
   display: flex;
 }
 
+@media screen and (max-width: 375px) {
+  .page-header {
+    height: 57px;
+  }
+}
+
 .page-main .wrapper {
   margin: 0 auto;
   width: 90%;
@@ -26,9 +36,19 @@
   display: flex;
 }
 
+@media screen and (max-width: 375px) {
+  .page-main .wrapper {
+    width: 95%;
+  }
+}
+
 .page-main .home {
   height: 755px;
   background-color: #131313;
+}
+
+.page-main .home .wrapper {
+  width: 100%;
 }
 
 .page-main .home .instagram {
@@ -36,9 +56,226 @@
   height: 80%;
 }
 
+@media screen and (max-width: 375px) {
+  .page-main .home .instagram {
+    display: none;
+  }
+}
+
 .page-main .home .main-image {
   background-image: url(./assets/main-image.svg);
   width: 94%;
   background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+@media screen and (max-width: 375px) {
+  .page-main .home .main-image {
+    width: 100%;
+    background-size: auto 100%;
+    background-position-x: center;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .page-main .home {
+    height: 476px;
+  }
+}
+
+.page-main .projects {
+  height: 662px;
+  background-color: #131313;
+}
+
+@media screen and (max-width: 375px) {
+  .page-main .projects {
+    height: 697px;
+  }
+}
+
+.page-main .online-control {
+  height: 1060px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#131313), color-stop(33%, #131313), color-stop(33%, #fff), to(#fff));
+  background: linear-gradient(to bottom, #131313 0%, #131313 33%, #fff 33%, #fff 100%);
+}
+
+.page-main .online-control::before {
+  content: '';
+  height: 350px;
+  width: 100%;
+  background-image: url(./assets/town.svg);
+  position: absolute;
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+  opacity: 0.05;
+}
+
+@media screen and (max-width: 375px) {
+  .page-main .online-control {
+    height: 856px;
+    background: #131313;
+  }
+  .page-main .online-control::before {
+    display: none;
+  }
+}
+
+.page-main .services {
+  height: 900px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 375px) {
+  .page-main .services {
+    height: 1809px;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .page-main .services {
+    margin-top: -1px;
+  }
+}
+
+.page-main .measurement {
+  height: 981px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 375px) {
+  .page-main .measurement {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .page-main .measurement {
+    margin-top: -2px;
+  }
+}
+
+.page-main .repair-styles {
+  height: 864px;
+  background-image: url(./assets/repair-styles.svg);
+  background-repeat: no-repeat;
+  background-size: 100% auto;
+}
+
+@media screen and (max-width: 375px) {
+  .page-main .repair-styles {
+    height: 375px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(59%, #fff), color-stop(59%, #131313), to(#131313));
+    background: linear-gradient(to bottom, #fff 0%, #fff 59%, #131313 59%, #131313 100%);
+  }
+}
+
+.page-main .design-projects {
+  height: 1075px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#fff), color-stop(58%, #fff), color-stop(58%, #131313), to(#131313));
+  background: linear-gradient(to bottom, #fff 0%, #fff 58%, #131313 58%, #131313 100%);
+}
+
+@media screen and (max-width: 375px) {
+  .page-main .design-projects {
+    height: 1770px;
+    background: #131313;
+  }
+}
+
+.page-main .plan-of-repair {
+  height: 720px;
+  background-color: #131313;
+}
+
+@media screen and (max-width: 375px) {
+  .page-main .plan-of-repair {
+    display: none;
+  }
+}
+
+.page-main .team {
+  height: 900px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#131313), color-stop(49%, #131313), color-stop(49%, #fff), to(#fff));
+  background: linear-gradient(to bottom, #131313 0%, #131313 49%, #fff 49%, #fff 100%);
+}
+
+@media screen and (max-width: 375px) {
+  .page-main .team {
+    height: 1705px;
+    background: #131313;
+  }
+}
+
+.page-main .review {
+  height: 800px;
+  background-color: #fff;
+}
+
+@media screen and (max-width: 375px) {
+  .page-main .review {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .page-main .review {
+    margin-top: -2px;
+  }
+}
+
+.page-main .contacts {
+  height: 1217px;
+  background-image: url(./assets/contacts-bg.png);
+  background-repeat: no-repeat;
+  background-position-y: bottom;
+  background-color: #fff;
+}
+
+.page-main .contacts::before {
+  content: '';
+  height: 261px;
+  width: 100%;
+  background-image: url(./assets/town.svg);
+  position: absolute;
+  background-repeat: repeat-x;
+  background-position-y: bottom;
+  opacity: 0.05;
+}
+
+@media screen and (max-width: 375px) {
+  .page-main .contacts {
+    background: #131313;
+    height: 1051px;
+  }
+  .page-main .contacts::before {
+    display: none;
+  }
+}
+
+@media screen and (min-width: 1441px) {
+  .page-main .contacts {
+    margin-top: -2px;
+  }
+}
+
+.page-footer {
+  height: 133px;
+  background-color: #131313;
+}
+
+.page-footer .wrapper {
+  margin: 0 auto;
+  width: 90%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@media screen and (max-width: 375px) {
+  .page-footer {
+    display: none;
+  }
 }
 /*# sourceMappingURL=style.css.map */
