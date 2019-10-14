@@ -1,0 +1,193 @@
+@mixin wrapper {
+    margin: 0 auto;
+    width: 90%;
+    height: 100%;
+    display: flex;
+}
+
+@mixin button {
+    background-color: $accent;
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.25);
+    border-radius: 2px;
+    transition: all 500ms ease;
+    border: none;
+    color: $bcg-light;
+    font-size: 0.8em;
+    font-family: $ft-demi;
+}
+
+@mixin button-transparent {
+    background-color: transparent;
+    border: 1px solid $bcg-light;
+    border-radius: 2px;
+    color: $bcg-light;
+    transition: all 500ms ease;
+    font-size: 0.8em;
+    font-family: $ft-demi;
+}
+
+@mixin button-hover {
+    color: $accent;
+    box-shadow: inset 0 0 0 2px $accent;
+    background-color: $bcg-light;
+    cursor: pointer;
+}
+
+@mixin swing-animation {
+    -webkit-animation: swing 0.6s ease;
+    animation: swing 0.6s ease;
+    -webkit-animation-iteration-count: 1;
+    animation-iteration-count: 1;
+}
+
+@mixin heading {
+    font-size: 1.3em;
+    font-family: $yeseva;
+}
+
+@mixin pseudo-lines {
+    width: 15%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2% 0;
+    &::before {
+        content: '';
+        width: 32px;
+        height: 1px;
+        background-color: $accent;
+    }
+    &::after {
+        content: '';
+        width: 32px;
+        height: 1px;
+        background-color: $accent;
+    }
+    @media screen and (max-width: 426px) {
+        margin: 4% 0 6% 0;
+    }
+}
+
+@mixin pseudo-text($content) {
+    &::after {
+        content: $content;
+        font-family: $ft-medium;
+        font-size: 1.1em;
+        color: #363636;
+        display: flex;
+        position: relative;
+    }
+}
+
+@mixin pseudo-circle($content) {
+    &::before {
+        content: $content;
+        width: 42px;
+        height: 42px;
+        font-family: $yeseva;
+        font-size: 1.2em;
+        color: $bcg-light;
+        text-align: center;
+        background: $accent;
+        box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.15);
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+    }
+}
+
+@mixin pseudo-sticker($content) {
+    &::after {
+        content: $content;
+        width: 70%;
+        background-color: $accent;
+        color: $bcg-light;
+        font-family: $yeseva;
+        font-size: 1.2em;
+        box-shadow: 5px 5px 10px rgba(227, 184, 115, 0.3);
+        height: 54px;
+        position: absolute;
+        bottom: -43%;
+        left: -15%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin pseudo-icon($url) {
+    &::before {
+        content: '';
+        background-color: $accent;
+        box-shadow: 0px 5px 20px rgba(227, 184, 115, 0.5);
+        position: absolute;
+        top: -10%;
+        left: -10%;
+        width: 70px;
+        height: 70px;
+        background-image: url($url);
+        background-repeat: no-repeat;
+        background-position: 50%;
+    }
+}
+
+@mixin pseudo-experience($experience) {
+    &::after {
+        content: $experience;
+        width: 100%;
+        height: 44px;
+        background-color: $accent;
+        color: #fff;
+        font-family: "Yeseva One";
+        font-size: 0.8em;
+        position: absolute;
+        bottom: -47%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+}
+
+@mixin pseudo-blocks($m2, $days) {
+    &::before {
+        content: $m2;
+        font-family: $yeseva;
+        color: $bcg-light;
+        font-size: 1.1em;
+        background-image: url(./assets/images/sizes.png);
+        background-repeat: no-repeat;
+        background-color: $accent;
+        width: 63px;
+        height: 54px;
+        border-right: 6px solid $bcg-light;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 6% 0 16%;
+        background-position: 16%;
+        position: absolute;
+        left: -4%;
+        bottom: -48%;
+    }
+    &::after {
+        content: $days;
+        font-family: $yeseva;
+        color: $bcg-light;
+        font-size: 1.1em;
+        background-image: url(./assets/images/calendar.png);
+        background-repeat: no-repeat;
+        background-color: $accent;
+        width: 80px;
+        height: 54px;
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+        padding: 0 6% 0 16%;
+        background-position: 16%;
+        position: absolute;
+        bottom: -48%;
+        left: 35.5%;
+    }
+}
