@@ -1,0 +1,300 @@
+.projects {
+    height: 662px;
+    background-color: $bcg-dark;
+    position: relative;
+    .wrapper {
+        margin-left: 5%;
+        width: 100%;
+        @media screen and (max-width: 426px){
+            margin: 0 auto;
+            width: 90%;
+            flex-direction: column;
+        }
+    }
+    .projects-description {
+        flex-basis: 35%;
+        display: flex;
+        flex-direction: column;
+        margin-top: 12%;
+        &__heading {
+            font-family: $yeseva;
+            font-size: 1.7em;
+            color: $accent;
+            max-width: 253px;
+            flex-basis: 13%;
+            position: relative;
+            &::after {
+                content: '';
+                width: 92px;
+                height: 1px;
+                background-color: $accent;
+                position: absolute;
+                top: 73%;
+                left: 68%;
+                @media screen and (max-width: 1024px) {
+                    top: 66%;
+                    left: 55%;
+                }
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+            @media screen and (max-width: 1024px) {
+                font-size: 1.5em;
+            }
+            @media screen and (max-width: 426px) {
+                max-width: 50%;
+                text-align: center;
+                margin-top: 4%;
+            }
+            
+        }
+        &__text {
+            font-family: $ft-book;
+            font-size: 1.1em;
+            color: $bcg-light;
+            max-width: 432px;
+            line-height: 1.7;
+            flex-basis: 30%;
+            margin-top: 7%;
+            @media screen and (max-width: 1024px) {
+                font-size: 0.9em;
+                max-width: 300px;
+            }
+            @media screen and (max-width: 426px) {
+                text-align: center;
+                max-width: 95%;
+                margin-top: 13%;
+            }
+        }
+        &__details {
+            display: flex;
+            flex-wrap: wrap;
+            flex-basis: 30%;
+            div {
+                flex-basis: 50%;
+            }
+            h3 {
+                color: $accent;
+                font-size: 1.1em;
+                font-family: $yeseva;
+                margin-bottom: 3%;
+                @media screen and (max-width: 1024px) {
+                    font-size: 0.9em;
+                }
+            }
+            p {
+                color: $bcg-light;
+                font-size: 0.9em;
+                font-family: $ft-book;
+                margin-bottom: 12%;
+                @media screen and (max-width: 1024px) {
+                    font-size: 0.7em;
+                }
+            }
+            @media screen and (max-width: 426px) {
+                margin-top: 93%;
+            }
+        }
+        &__paginator {
+            display: flex;
+            width: 50%;
+            justify-content: space-between;
+            margin-top: 10%;
+            &_dotes {
+                display: flex;
+                list-style: none;
+                align-items: center;
+                flex-basis: 60%;
+                justify-content: space-evenly;
+                li {
+                    width: 10px;
+                    height: 10px;
+                    background-color: rgba(255, 255, 255, 0.3);
+                    border-radius: 50%;
+                    &:first-child {
+                        margin-left: 5%;
+                    }
+                    &:last-child {
+                        margin-right: 5%;
+                    }
+                    &:hover {
+                        background-color: $bcg-light;
+                        cursor: pointer;
+                    }
+                }
+                .checked {
+                    background-color: #fff;
+                }
+            }
+            &_left-arr {
+                flex-basis: 20%;
+                &:hover {
+                    cursor: pointer;
+                    @include swing-animation;
+                }
+            }
+            &_right-arr {
+                flex-basis: 20%;
+                &:hover {
+                    cursor: pointer;
+                    @include swing-animation;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                width: 70%;
+            }
+            @media screen and (max-width: 426px){
+                display: none;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            font-size: 80%;
+        }
+        @media screen and (max-width: 426px) {
+            align-items: center;
+            font-size: 100%;
+        }
+    }
+    .projects-slider {
+        flex-basis: 65%;
+        margin-top: 6%;
+        overflow: hidden;
+        &__nav {
+            &_list {
+                display: flex;
+                list-style: none;
+                .checked {
+                    color: $accent;
+                    border-bottom: 1px solid $accent;
+                }
+                &_list-item {
+                    font-family: $yeseva;
+                    font-size: 0.8em;
+                    color: rgba(255, 255, 255, 0.3);
+                    margin-right: 5%;
+                    padding-bottom: 0.5%;
+                    transition: $ease; 
+                    &:hover {
+                        color: $accent;
+                        border-bottom: 1px solid $accent;
+                        cursor: pointer;
+                    }
+                    @media screen and (max-width: 768px) {
+                        font-size: 0.5em;
+                    }
+                }
+            }
+            @media screen and (max-width: 768px) {
+                margin-top: 5%;
+            }
+            @media screen and (max-width: 426px){
+                display: none;
+            }
+        }
+        &__photo-container {
+            margin-top: 6%;
+            display: flex;
+            align-items: center;
+            &_image1 {
+                margin-right: 2%;
+                @media screen and (max-width: 1024px) {
+                    max-width: 595px;
+                }
+                @media screen and (max-width: 768px) {
+                    align-self: center;
+                    width: 90%;
+                }
+                @media screen and (max-width: 426px){
+                    display: none;
+                }
+            }
+            &_image2 {
+                @media screen and (max-width: 1024px) {
+                    display: none;
+                }
+                @media screen and (max-width: 426px){
+                    display: block;
+                    max-width: 383px;
+                }
+                @media screen and (max-width: 376px){
+                    max-width: 340px;
+                }
+                @media screen and (max-width: 321px){
+                    max-width: 290px;
+                }
+            }
+            &_button-left {
+                @media screen and (min-width: 427px) {
+                    display: none;
+                }
+                @media screen and (max-width: 426px){
+                    @include button;
+                    display: block;
+                    width: 36px;
+                    height: 36px;
+                    border-radius: 50%;
+                    background-image: url(../../assets/images/slider-arrow.png);
+                    background-repeat: no-repeat;
+                    background-position: 50%;
+                    background-size: 20%;
+                    position: absolute;
+                    transform: rotate(180deg);
+                    box-shadow: none;
+                    align-self: center;
+                    left: 8%;
+                }
+                &:hover {
+                    @include button-hover;
+                    background-color: transparent;
+                }
+            }
+            &_button-right {
+                @include button;
+                box-shadow: 0px 0px 15px rgba(227, 184, 115, 0.5);
+                position: absolute;
+                align-self: center;
+                right: 3%;
+                width: 55px;
+                height: 55px;
+                border-radius: 50%;
+                background-image: url(../../assets/images/slider-arrow.png);
+                background-repeat: no-repeat;
+                background-position: 50%;
+                &:hover {
+                    @include button-hover;
+                    background-color: transparent;
+                }
+                @media screen and (max-width: 426px) {
+                    width: 36px;
+                    height: 36px;
+                    background-size: 20%;
+                    box-shadow: none;
+                    right: 8%;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                margin-top: -7%;
+            }
+        }
+        @media screen and (max-width: 768px) {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            margin-top: 0;
+        }
+        @media screen and (max-width: 426px) {
+            position: absolute;
+            top: 37%;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        height: 615px;
+    }
+    @media screen and (max-width: 768px) {
+        height: 480px;
+    }
+    @media screen and (max-width: 426px) {
+        height: 697px;
+    }
+}

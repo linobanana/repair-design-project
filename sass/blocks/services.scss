@@ -1,0 +1,159 @@
+.services {
+    height: 900px;
+    background-color: $bcg-light;
+    margin-top: -2px;
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        @media screen and (max-width: 426px) {
+            width: 90%;
+        }
+    }
+    &__heading {
+        @include heading;
+        color: #181818;
+        margin-top: 5%;
+        @media screen and (max-width: 426px) {
+            margin-top: 26%;
+        }
+    }
+    &__img {
+        @include pseudo-lines;
+    }
+    .types {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        .redecorating, .overhaul,
+        .designer-repair {
+            display: flex;
+            flex-direction: column;
+            &__img {
+                @media screen and (max-width: 1024px) {
+                    width: 80%;
+                }
+                @media screen and (max-width: 426px) {
+                    width: 340px;
+                }
+                @media screen and (max-width: 321px) {
+                    width: 300px;
+                }
+            }
+            &__repair-plan {
+                align-self: center;
+                margin-top: -25%;
+                background-color: $bcg-light;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+                width: 80%;
+                font-family: $ft-book;
+                color: #959595;
+                font-size: 0.9em;
+                height: 286px;
+                padding: 7% 0 0 7%;
+                &_heading {
+                    font-family: $yeseva;
+                    font-size: 1.2em;
+                    color: #363636;
+                    line-height: 1.5;
+                }
+                &_list {
+                    margin-left: 5%;
+                    display: flex;
+                    flex-direction: column;
+                    height: 70%;
+                    justify-content: space-evenly;
+                    position: relative;
+                }
+                @media screen and (max-width: 1024px) {
+                    width: 75%;
+                    align-self: auto;
+                }
+                @media screen and (max-width: 768px) {
+                    height: 200px;
+                }
+                @media screen and (max-width: 426px) {
+                    height: 241px;
+                    align-self: flex-start;
+                    margin-top: -43%;
+                }
+            }
+            @media screen and (max-width: 426px) {
+                margin-bottom: 20%;
+            }
+        }
+        .redecorating {
+            &__repair-plan_list {
+                @include pseudo-sticker('FROM 900 RUB / M2');
+                &::after {
+                    @media screen and (max-width: 1024px) {
+                        font-size: 0.7em;
+                    }
+                    @media screen and (max-width: 426px) {
+                        height: 40px;
+                        font-size: 1em;
+                        bottom: -40%;
+                    }
+                    @media screen and (max-width: 321px) {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+        .overhaul {
+            &__repair-plan_list {
+                @include pseudo-sticker('FROM 1800 RUB / M2');
+                &::after {
+                    @media screen and (max-width: 1024px) {
+                        font-size: 0.7em;
+                    }
+                    @media screen and (max-width: 426px) {
+                        height: 40px;
+                        font-size: 1em;
+                        bottom: -40%;
+                    }
+                    @media screen and (max-width: 321px) {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+        .designer-repair {
+            &__repair-plan_list {
+                @include pseudo-sticker('FROM 4000 RUB / M2');
+                &::after {
+                    @media screen and (max-width: 1024px) {
+                        font-size: 0.7em;
+                    }
+                    @media screen and (max-width: 426px) {
+                        height: 40px;
+                        font-size: 1em;
+                        bottom: -40%;
+                    }
+                    @media screen and (max-width: 321px) {
+                        font-size: 0.8em;
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 426px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    @media screen and (min-width: 1441px) {
+        margin-top: -1px;
+    }
+    @media screen and (max-width: 1024px) {
+        height: 690px;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 70%;
+        height: 505px;
+    }
+    @media screen and (max-width: 426px) {
+        height: 1809px;
+    }
+    @media screen and (max-width: 321px) {
+        height: 1650px;
+    }
+}

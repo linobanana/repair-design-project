@@ -1,0 +1,205 @@
+.design-projects {
+    height: 1075px;
+    background: linear-gradient(to bottom, #fff 0%, #fff 58%, #131313 58%, #131313 100%);
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        @media screen and (max-width: 426px) {
+            width: 90%;
+        }
+    }
+    &__heading {
+        @include heading;
+        color: #181818;
+        margin-top: 10%;
+        @media screen and (max-width: 768px) {
+            margin-top: 15%;
+        }
+        @media screen and (max-width: 426px) {
+            color: $bcg-light;
+            margin-top: 0;
+        }
+    }
+    &__img {
+        @include pseudo-lines;
+    }
+    &__description {
+        max-width: 655px;
+        font-family: $ft-book;
+        font-size: 1.25em;
+        text-align: center;
+        color: #363636;
+        margin-bottom: 5%;
+        @media screen and (max-width: 426px) {
+            color: $bcg-light;
+            max-width: 281px;
+            margin-bottom: 10%;
+            line-height: 1.5;
+            font-size: 0.9em;
+        }
+    }
+    .types {
+        display: flex;
+        width: 100%;
+        justify-content: space-evenly;
+        .mini, .standart,
+        .full {
+            display: flex;
+            flex-direction: column;
+            &__img {
+                @media screen and (max-width: 1024px) {
+                    width: 80%;
+                }
+                @media screen and (max-width: 426px) {
+                    width: 340px;
+                }
+                @media screen and (max-width: 321px) {
+                    width: 300px;
+                }
+            }
+            &__design-project {
+                align-self: center;
+                margin-top: -25%;
+                background-color: $bcg-light;
+                box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03);
+                width: 80%;
+                font-family: $ft-book;
+                color: #959595;
+                font-size: 0.9em;
+                padding: 7% 0 0 7%;
+                &_heading {
+                    font-family: $yeseva;
+                    font-size: 1.1em;
+                    color: #363636;
+                    line-height: 1.5;
+                }
+                &_list {
+                    margin-left: 5%;
+                    display: flex;
+                    flex-direction: column;
+                    height: 70%;
+                    justify-content: space-evenly;
+                    position: relative;
+                }
+                @media screen and (max-width: 1024px) {
+                    width: 75%;
+                }
+                @media screen and (max-width: 426px) {
+                    height: 241px;
+                    align-self: flex-start;
+                    margin-top: -43%;
+                }
+                @media screen and (max-width: 1024px) {
+                    align-self: auto;
+                }
+            }
+            @media screen and (max-width: 426px) {
+                margin-bottom: 20%;
+            }
+        }
+        .mini {
+            &__design-project {
+                height: 211px;
+                @media screen and (max-width: 768px) {
+                    height: 145px;
+                }
+                @media screen and (max-width: 426px) {
+                    height: 177px;
+                }
+            }
+            &__design-project_list {
+                @include pseudo-sticker('150 RUB / M2');
+                height: 60%;
+                &::after {
+                    bottom: -68%;
+                    @media screen and (max-width: 1024px) {
+                        font-size: 0.7em;
+                    }
+                    @media screen and (max-width: 426px) {
+                        height: 40px;
+                        font-size: 1em;
+                        bottom: -65%;
+                        left: -15.5%;
+                    }
+                }
+            }
+        }
+        .standart {
+            &__design-project {
+                height: 286px;
+                @media screen and (max-width: 768px) {
+                    height: 200px;
+                }
+                @media screen and (max-width: 426px) {
+                    height: 241px;
+                }
+            }
+            &__design-project_list {
+                @include pseudo-sticker('400 RUB / M2');
+                &::after {
+                    @media screen and (max-width: 1024px) {
+                        font-size: 0.7em;
+                    }
+                    @media screen and (max-width: 426px) {
+                        height: 40px;
+                        font-size: 1em;
+                        bottom: -40%;
+                        left: -15.5%;
+                    }
+                }
+            }
+        }
+        .full {
+            &__design-project {
+                height: 414px;
+                @media screen and (max-width: 768px) {
+                    height: 285px;
+                }
+                @media screen and (max-width: 426px) {
+                    height: 241px;
+                }
+            }
+            &__design-project_list {
+                @include pseudo-sticker('900 RUB / M2');
+                height: 80%;
+                &::after {
+                    bottom: -25%;
+                    @media screen and (max-width: 1024px) {
+                        font-size: 0.7em;
+                    }
+                    @media screen and (max-width: 426px) {
+                        height: 40px;
+                        font-size: 1em;
+                        bottom: -40%;
+                        left: -15.5%;
+                    }
+                }
+                &_item:nth-child(7) ~ li {
+                    @media screen and (max-width: 426px) {
+                        display: none;
+                    }
+                }
+                @media screen and (max-width: 426px) {
+                    height: 70%;
+                }
+            }
+        }
+        @media screen and (max-width: 426px) {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        height: 865px;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 70%;
+        height: 684px;
+        background: $bcg-light;
+    }
+    @media screen and (max-width: 426px) {
+        font-size: 100%;
+        height: 1770px;
+        background: $bcg-dark;
+    }
+}

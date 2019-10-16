@@ -1,0 +1,206 @@
+.online-control {
+    &::before {
+        content: '';
+        height: 350px;
+        width: 100%;
+        background-image: url(../../assets/images/town.svg);
+        position: absolute;
+        background-repeat: repeat-x;
+        background-position-y: bottom;
+        opacity: 0.05;
+        @media screen and (max-width: 1024px){
+            display: none;
+        }
+    }
+    .wrapper {
+        flex-direction: column;
+        align-items: center;
+        @media screen and (max-width: 426px) {
+            width: 90%;
+        }
+    }
+    height: 1060px;
+    background: linear-gradient(to bottom, #131313 0%, #131313 33%, #fff 33%, #fff 100%);
+    &__heading {
+        font-size: 1.3em;
+        font-family: $yeseva;
+        color: $bcg-light;
+        margin-top: 6%;
+        @media screen and (max-width: 426px) {
+            margin-top: 15%;
+        }
+    }
+    &__img {
+        @include pseudo-lines;
+    }
+    &__video {
+        box-shadow: 0px 20px 50px rgba(0, 0, 0, 0.15);
+        @media screen and (max-width: 768px) {
+            width: 94%;
+        }
+        @media screen and (max-width: 426px) {
+            max-height: 207px;
+        }
+    }
+    &__description {
+        font-family: $ft-book;
+        text-align: center;
+        color: #363636;
+        max-width: 681px;
+        font-size: 1.3em;
+        position: relative;
+        padding: 7% 0;
+        line-height: 1.7;
+        &::before {
+            content: '';
+            width: 55px;
+            height: 1px;
+            background-color: $accent;
+            position: absolute;
+            left: 50%;
+            top: 19%;
+            @media screen and (max-width: 426px) {
+                left: 45%;
+                top: 13%;
+            }
+        }
+        @media screen and (max-width: 426px) {
+            width: 89%;
+            color: $bcg-light;
+            padding: 18% 0 0 0;
+            line-height: 1.3;
+        }
+    }
+    &__form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        [for=name], [for=phone] {
+            display: flex;
+            flex-direction: column;
+            max-width: 230px;
+            flex-basis: 27%;
+            font-family: $ft-book;
+            font-size: 0.9em;
+            color: rgba(54, 54, 54, 0.5);
+            @media screen and (max-width: 426px) {
+                flex-basis: 100%;
+                max-width: 340px;
+                color: $bcg-light;
+                opacity: 0.5;
+            }
+            &:hover {
+                color: $accent;
+            }
+        }
+        [for=name] {
+            @media screen and (max-width: 426px) {
+                margin: 4% 0 -6% 0;
+            }
+        }
+        &_name-input, &_phone-input {
+            font-family: $ft-book;
+            font-size: 1.2em;
+            line-height: 1.6;
+            border: none;
+            border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+            &:focus {
+                outline: none;
+                border-bottom: 1px solid $accent;
+                transition: all 1000ms ease;
+            }
+            &::placeholder {
+                @media screen and (max-width: 426px) {
+                    color: #fff;
+                }
+            }
+            @media screen and (max-width: 426px) {
+                background-color: $bcg-dark;
+                border-bottom: 1px solid $bcg-light;
+            }
+        }
+        &_checkbox {
+            margin-top: 5%;
+            [for=checkbox] {
+                font-family: $ft-book;
+                font-size: 1em;
+                line-height: 2;
+                color: #181818;
+                @media screen and (max-width: 426px) {
+                    color: $bcg-light;
+                    margin-right: 22%;
+                }
+            }
+            [type=checkbox] {
+                display: none;
+            }
+            [type=checkbox] + label:before {
+                content: "\2713";
+                color: $accent;
+                background-color: $accent;
+                display: inline-block;
+                font-size: 20px;    
+                line-height: 22px;
+                margin: -5px 10px 0 0;
+                height: 18px;
+                width: 18px;
+                text-align: center;
+                border-radius: 1px;
+                vertical-align: middle;
+                transition: color ease .3s;
+            }
+            input[type=checkbox]:checked + label:before {
+                color: $bcg-light;
+            }
+            @media screen and (max-width: 426px) {
+                margin-top: -10%;
+                margin-left: 6%;
+                width: 100%;
+            }
+            @media screen and (max-width: 375px) {
+                margin-left: 0;
+            }
+        }
+        &_button {
+            @include button;
+            flex-basis: 23%;
+            &:hover {
+                @include button-hover;
+            }
+            @media screen and (max-width: 426px) {
+                position: absolute;
+                width: 85%;
+                bottom: -11%;
+                height: 20%;
+                border-radius: 0;
+                box-shadow: none;
+                font-size: 0.9em;
+            }
+            @media screen and (max-width: 375px) {
+                bottom: -19%;
+            }
+            @media screen and (max-width: 320px) {
+                bottom: -10%;
+            }
+        }
+        @media screen and (max-width: 426px) {
+            position: relative;
+            flex-basis: 30%;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        height: 960px;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 70%;
+        height: 815px;
+    }
+    @media screen and (max-width: 426px) {
+        height: 856px;
+        background: $bcg-dark; 
+        font-size: 90%;
+        &::before {
+            display: none;
+        }
+    }
+}
