@@ -1,0 +1,268 @@
+.measurement {
+    height: 981px;
+    background-color: $bcg-light;
+    margin-top: -1px;
+    overflow: hidden;
+    .wrapper {
+        margin-right: 5%;
+        width:  100%;
+        @media screen and (max-width: 1024px) {
+            margin-right: 0 auto;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    .measurement-img {
+        margin-top: 6%;
+        position: relative;
+        flex-basis: 50%;
+        .whitespace {
+            width: 60px;
+            height: 60px;
+            background-color: $bcg-light;
+            position: absolute;
+        }
+        .whitespace1 {
+            @include pseudo-circle('01');
+            @include pseudo-text('Our specialist will arrive for measurements per day contact, or appoint a date convenient for you');
+            &::before {
+                top: 4%;
+                left: 14%;
+            }
+            &::after {
+                width: 364px;
+                top: -70%;
+                left: 125%;
+            }
+            top: 11%;
+            left: 47%;
+            @media screen and (min-width: 1500px) {
+                top: 12%;
+                left: 45%;
+            }
+        }
+        .whitespace2 {
+            @include pseudo-circle('02');
+            @include pseudo-text('Free metering');
+            &::before {
+                top: 12%;
+                left: 18%;
+            }
+            &::after {
+                left: 112%;
+                width: 99px;
+                top: -42%;
+            }
+            top: 28%;
+            left: 62%;
+            @media screen and (min-width: 1500px) {
+                top: 30%;
+                left: 58%;                
+            }
+        }
+        .whitespace3 {
+            @include pseudo-circle('03');
+            @include pseudo-text('Free consultation');
+            &::before {
+                top: 13%;
+                left: 0%;
+            }
+            &::after {
+                width: 122px;
+                top: -39%;
+                left: 100%;
+            }
+            top: 60%;
+            left: 58%;
+            @media screen and (min-width: 1500px) {
+                top: 57%;
+                left: 57%;              
+            }
+        }
+        .whitespace4 {
+            @include pseudo-circle('04');
+            @include pseudo-text('Get a cost estimate and the timing of your future repairs');
+            &::before {
+                top: 11%;
+                left: 19%;
+            }
+            &::after {
+                width: 240px;
+                left: 111%;
+                top: -20%;
+            }
+            top: 73%;
+            left: 37%;
+        }
+        .ellipse {
+            margin-top: -84%;
+            margin-left: -22%;
+            width: 650px;
+            height: 650px;
+            border-radius: 50%;
+            background: 
+            linear-gradient(#fff,#fff) padding-box,
+            linear-gradient(to right, #fff 0%, #fff 20%, #fff 20%, #E3B873 100%) border-box;
+            border: 3px solid transparent;
+            @media screen and (min-width: 1500px) {
+                margin-top: -78%;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            display: none;
+        }
+    }
+    .measurement-form {
+        align-self: center;
+        flex-basis: 45%;
+        height: 100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+        &__form {
+            background-color: $bcg-dark;
+            box-shadow: 0px 30px 30px rgba(0, 0, 0, 0.05);
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            padding: 28px 49px;
+            justify-content: space-between;
+            color: $bcg-light;
+            flex-basis: 52%;
+            width: 60%;
+            &_heading {
+                font-family: $ft-demi;
+                font-size: 1.2em;
+                text-align: center;
+                max-width: 297px;
+                align-self: center;
+            }
+            [for=name2], [for=phone2], [for=email] {
+                display: flex;
+                flex-direction: column;
+                font-family: $ft-book;
+                font-size: 0.9em;
+                color: rgba(255, 255, 255, 0.5);
+                &:hover {
+                    color: $accent;
+                }
+            }
+            &_name-input, &_phone-input, &_email-input {
+                font-family: $ft-medium;
+                font-size: 1.2em;
+                line-height: 1.6;
+                border: none;
+                border-bottom: 1px solid rgba(54, 54, 54, 0.3);
+                background-color: $bcg-dark;
+                color: #fff;
+                &:focus {
+                    outline: none;
+                    border-bottom: 1px solid $accent;
+                    transition: all 1000ms ease;
+                }
+                &::placeholder {
+                    color: #fff;
+                }
+            }
+            &_checkbox {
+                margin-top: -10%;
+                [for=checkbox2] {
+                    font-family: $ft-book;
+                    font-size: 1em;
+                    line-height: 2;
+                    color: $bcg-light;
+                }
+                [type=checkbox] {
+                    display: none;
+                }
+                [type=checkbox] + label:before {
+                    content: "\2713";
+                    color: $accent;
+                    background-color: $accent;
+                    display: inline-block;
+                    font-size: 20px;    
+                    line-height: 22px;
+                    margin: -5px 10px 0 0;
+                    height: 18px;
+                    width: 18px;
+                    text-align: center;
+                    border-radius: 1px;
+                    vertical-align: middle;
+                    transition: color ease .3s;
+                }
+                input[type=checkbox]:checked + label:before {
+                    color: $bcg-light;
+                }
+            }
+            &_button {
+                @include button;
+                width: 213px;
+                height: 51px;
+                align-self: flex-end;
+                &:hover {
+                    @include button-hover;
+                }
+            }
+            @media screen and (max-width: 1024px) {
+                flex-basis: auto;
+                width: auto;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            flex-basis: auto;
+            align-self: auto;
+            justify-content: space-evenly;
+            align-items: unset;
+            flex-direction: row-reverse;
+            height: 80%;
+            width: 90%;
+        }
+    }
+    .money-pig {
+        display: flex;
+        align-self: center;
+        position: relative;
+        top: 4%;
+        left: 8%;
+        align-items: center;
+        &__icon {
+            width: 72px;
+            height: 72px;
+            background-color: $accent;
+            border-radius: 50%;
+            background-image: url(../../assets/images/money-pig.png);
+            background-repeat: no-repeat;
+            background-position: 50%;
+            box-shadow: 0px 10px 20px rgba(237, 192, 120, 0.2);
+        }
+        &__banner-text {
+            font-family: $ft-demi;
+            font-size: 1.2em;
+            line-height: 1.5;
+            color: $accent;
+            text-shadow: 0px 3px 10px rgba(227, 184, 115, 0.15);
+            max-width: 300px;
+            position: relative;
+            left: 5%;
+        }
+        @media screen and (max-width: 1024px) {
+            left: 0;
+            top: 0;
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        height: 620px;
+        margin-top: -2px;
+    }
+    @media screen and (max-width: 1024px) {
+        height: 505px;
+        font-size: 70%;
+    }
+    @media screen and (max-width: 426px) {
+        display: none;
+    }
+    @media screen and (min-width: 1441px) {
+        margin-top: -2px;
+    }
+}

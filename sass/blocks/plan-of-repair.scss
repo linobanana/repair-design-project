@@ -1,0 +1,187 @@
+.plan-of-repair {
+    height: 720px;
+    background-color: $bcg-dark;
+    .plan-description {
+        flex-basis: 40%;
+        &__how {
+            font-family: $ft-demi;
+            font-size: 0.9em;
+            color: $bcg-light;
+            margin-bottom: 5%;
+        }
+        &__heading {
+            font-family: $yeseva;
+            font-size: 1.7em;
+            line-height: 1.5;
+            color: $accent;
+            max-width: 175px;
+            position: relative;
+            margin-bottom: 23%;
+            &::after {
+                content: '';
+                width: 92px;
+                height: 1px;
+                background-color: $accent;
+                position: absolute;
+                top: 73%;
+                left: 120%;
+                @media screen and (max-width: 1024px) {
+                    top: 72%;
+                    left: 83%;
+                }
+                @media screen and (max-width: 768px) {
+                    display: none;
+                }
+            }
+            @media screen and (max-width: 1024px) {
+                max-width: 145px;
+            }
+        }
+        &__step-count {
+            font-family: $yeseva;
+            font-size: 1.1em;
+            color: $bcg-light;
+            margin-bottom: 3%;
+        }
+        &__text {
+            &_heading {
+                font-family: $yeseva;
+                font-size: 0.9em;
+                color: $accent;
+                max-width: 216px;
+                line-height: 1.5;
+                margin-bottom: 4%;
+            }
+            &_main {
+                font-family: $ft-book;
+                font-size: 0.9em;
+                color: $bcg-light;
+                max-width: 337px;
+                line-height: 2;
+                @media screen and (max-width: 1024px) {
+                    max-width: 285px;
+                }
+            }
+        }
+        &__paginator {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 18%;
+            width: 80%;
+            &_dotes {
+                display: flex;
+                list-style: none;
+                align-items: center;
+                flex-basis: 60%;
+                justify-content: space-evenly;
+                li {
+                    width: 10px;
+                    height: 10px;
+                    background-color: rgba(255, 255, 255, 0.3);
+                    border-radius: 50%;
+                    &:first-child {
+                        margin-left: 5%;
+                    }
+                    &:last-child {
+                        margin-right: 5%;
+                    }
+                    &:hover {
+                        background-color: $bcg-light;
+                        cursor: pointer;
+                    }
+                }
+                .checked {
+                    background-color: #fff;
+                }
+            }
+            &_left-arr {
+                flex-basis: 20%;
+                &:hover {
+                    cursor: pointer;
+                    @include swing-animation;
+                }
+            }
+            &_right-arr {
+                flex-basis: 20%;
+                &:hover {
+                    cursor: pointer;
+                    @include swing-animation;
+                }
+            }
+            @media screen and (max-width: 768px) {
+                width: 83%;
+            }
+            @media screen and (max-width: 426px){
+                display: none;
+            }
+        }
+        @media screen and (max-width: 1024px) {
+            padding-top: 10%;
+        }
+        @media screen and (max-width: 768px) {
+            padding-top: 3%;
+        }
+    }
+    .steps {
+        display: flex;
+        flex-direction: column;
+        flex-basis: 70%;
+        justify-content: flex-end;
+        &__names {
+            display: flex;
+            flex-wrap: wrap;
+            :not(:nth-child(3)),
+            :not(:last-child) {
+                flex-basis: 40%;
+            }
+            :nth-child(3), 
+            :last-child {
+                flex-basis: 20%;
+            }
+            &_name {
+                opacity: 0.5;
+                &_count {
+                    font-family: $yeseva;
+                    font-size: 0.9em;
+                    padding-bottom: 0.5%;
+                    border-bottom: 1px solid $accent;
+                    width: fit-content;
+                    color: $bcg-light;
+                    margin-bottom: 3%;
+                }
+                &_description {
+                    font-family: $ft-book;
+                    font-size: 0.9em;
+                    max-width: 136px;
+                    color: $bcg-light;
+                    margin-bottom: 20%;
+                }
+                &:hover {
+                    opacity: 1;
+                    cursor: pointer;
+                }
+            }
+            .checked {
+                opacity: 1;
+            }
+        }
+        &__img {
+            @media screen and (max-width: 1024px) {
+                max-width: 585px
+            }
+            @media screen and (max-width: 768px) {
+                max-width: 455px
+            }
+        }
+    }
+    @media screen and (max-width: 1024px) {
+        font-size: 70%;
+        height: 590px;
+    }
+    @media screen and (max-width: 768px) {
+        height: 430px;
+    }
+    @media screen and (max-width: 767px) {
+        display: none;
+    }
+}
