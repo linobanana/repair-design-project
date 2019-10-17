@@ -1,6 +1,6 @@
 .repair-styles {
     height: 864px;
-    background-image: url(../../assets/images/repair-styles.svg);
+    background-image: url(./assets/images/repair-styles.svg);
     background-repeat: no-repeat;
     background-size: 100% auto;
     background-color: $bcg-light;
@@ -123,7 +123,7 @@
                 width: 36px;
                 height: 36px;
                 border-radius: 50%;
-                background-image: url(../../assets/images/slider-arrow.png);
+                background-image: url(./assets/images/slider-arrow.png);
                 background-repeat: no-repeat;
                 background-position: 50%;
                 background-size: 20%;
@@ -145,7 +145,7 @@
             width: 55px;
             height: 55px;
             border-radius: 50%;
-            background-image: url(../../assets/images/slider-arrow.png);
+            background-image: url(./assets/images/slider-arrow.png);
             background-repeat: no-repeat;
             background-position: 50%;
             &:hover {

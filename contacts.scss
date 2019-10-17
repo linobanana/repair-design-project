@@ -1,6 +1,6 @@
 .contacts {
     height: 1217px;
-    background-image: url(../../assets/images/contacts-bg.png);
+    background-image: url(./assets/images/contacts-bg.png);
     background-size: 100% calc(100% - 261px);
     background-repeat: no-repeat;
     background-position-y: bottom;
@@ -237,7 +237,7 @@
         content: '';
         height: 261px;
         width: 100%;
-        background-image: url(../../assets/images/town.svg);
+        background-image: url(./assets/images/town.svg);
         position: absolute;
         background-repeat: repeat-x;
         background-position-y: bottom;
