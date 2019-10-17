@@ -104,6 +104,11 @@
         width: 88%;
         align-items: center;
         justify-content: space-between;
+        @media screen and (max-width: 426px) {
+            .wrapper {
+                width: 95%;
+            }
+        }
     }
     @media screen and (max-width: 768px) {
         height: 57px;

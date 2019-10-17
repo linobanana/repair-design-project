@@ -3,6 +3,7 @@
     background-color: $bcg-light;
     margin-top: -2px;
     .wrapper {
+        @include wrapper;
         flex-direction: column;
         align-items: center;
     }

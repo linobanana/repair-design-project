@@ -24,14 +24,3 @@
 body {
     background-color: $bcg-dark;
 }
-
-.page-main {
-    .wrapper {
-        @include wrapper;
-    }
-    @media screen and (max-width: 426px) {
-        .wrapper {
-            width: 95%;
-        }
-    }
-}
