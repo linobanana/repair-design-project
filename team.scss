@@ -100,7 +100,7 @@
             }
             .member1-img {
                 position: relative;
-                @include pseudo-icon('../../assets/images/first-team-member-icon.png');
+                @include pseudo-icon('./assets/images/first-team-member-icon.png');
                 &::before {
                     @media screen and (max-width: 768px) {
                         height: 40px;
@@ -117,7 +117,7 @@
             }
             .member2-img {
                 position: relative;
-                @include pseudo-icon('../../assets/images/second-team-member-icon.png');
+                @include pseudo-icon('./assets/images/second-team-member-icon.png');
                 &::before {
                     @media screen and (max-width: 768px) {
                         height: 40px;
@@ -134,7 +134,7 @@
             }
             .member3-img {
                 position: relative;
-                @include pseudo-icon('../../assets/images/third-team-member-icon.png');
+                @include pseudo-icon('./assets/images/third-team-member-icon.png');
                 &::before {
                     @media screen and (max-width: 768px) {
                         height: 40px;

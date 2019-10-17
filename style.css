@@ -54,27 +54,27 @@
 
 @font-face {
   font-family: 'Proxima Nova Regular';
-  src: url(../../assets/fonts/ProximaNova-Regular.ttf);
+  src: url(./assets/fonts/ProximaNova-Regular.ttf);
 }
 
 @font-face {
   font-family: 'Futura Book Cyrillic';
-  src: url(../../assets/fonts/FuturaBookC.ttf);
+  src: url(./assets/fonts/FuturaBookC.ttf);
 }
 
 @font-face {
   font-family: 'Futura Demi Cyrillic';
-  src: url(../../assets/fonts/FuturaDemiC.ttf);
+  src: url(.//assets/fonts/FuturaDemiC.ttf);
 }
 
 @font-face {
   font-family: 'Futura Medium Cyrillic';
-  src: url(../../assets/fonts/FuturaMediumC.ttf);
+  src: url(./assets/fonts/FuturaMediumC.ttf);
 }
 
 @font-face {
   font-family: 'Yeseva One';
-  src: url(../../assets/fonts/YesevaOne.ttf);
+  src: url(./assets/fonts/YesevaOne.ttf);
 }
 
 .page-header {
@@ -356,7 +356,7 @@
 }
 
 .home .main-page {
-  background-image: url(../../assets/images/main-image.svg);
+  background-image: url(./assets/images/main-image.svg);
   width: 94%;
   background-repeat: no-repeat;
   background-size: 100% auto;
@@ -989,7 +989,7 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-image: url(../../assets/images/slider-arrow.png);
+    background-image: url(./assets/images/slider-arrow.png);
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 20%;
@@ -1035,7 +1035,7 @@
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background-image: url(../../assets/images/slider-arrow.png);
+  background-image: url(./assets/images/slider-arrow.png);
   background-repeat: no-repeat;
   background-position: 50%;
 }
@@ -1116,7 +1116,7 @@
   content: '';
   height: 350px;
   width: 100%;
-  background-image: url(../../assets/images/town.svg);
+  background-image: url(./assets/images/town.svg);
   position: absolute;
   background-repeat: repeat-x;
   background-position-y: bottom;
@@ -2326,7 +2326,7 @@
   height: 72px;
   background-color: #e3b873;
   border-radius: 50%;
-  background-image: url(../../assets/images/money-pig.png);
+  background-image: url(./assets/images/money-pig.png);
   background-repeat: no-repeat;
   background-position: 50%;
   -webkit-box-shadow: 0px 10px 20px rgba(237, 192, 120, 0.2);
@@ -2379,7 +2379,7 @@
 
 .repair-styles {
   height: 864px;
-  background-image: url(../../assets/images/repair-styles.svg);
+  background-image: url(./assets/images/repair-styles.svg);
   background-repeat: no-repeat;
   background-size: 100% auto;
   background-color: #fff;
@@ -2589,7 +2589,7 @@
     width: 36px;
     height: 36px;
     border-radius: 50%;
-    background-image: url(../../assets/images/slider-arrow.png);
+    background-image: url(./assets/images/slider-arrow.png);
     background-repeat: no-repeat;
     background-position: 50%;
     background-size: 20%;
@@ -2631,7 +2631,7 @@
   width: 55px;
   height: 55px;
   border-radius: 50%;
-  background-image: url(../../assets/images/slider-arrow.png);
+  background-image: url(./assets/images/slider-arrow.png);
   background-repeat: no-repeat;
   background-position: 50%;
 }
@@ -3694,7 +3694,7 @@
   left: -10%;
   width: 70px;
   height: 70px;
-  background-image: url("../../assets/images/first-team-member-icon.png");
+  background-image: url("./assets/images/first-team-member-icon.png");
   background-repeat: no-repeat;
   background-position: 50%;
 }
@@ -3730,7 +3730,7 @@
   left: -10%;
   width: 70px;
   height: 70px;
-  background-image: url("../../assets/images/second-team-member-icon.png");
+  background-image: url("./assets/images/second-team-member-icon.png");
   background-repeat: no-repeat;
   background-position: 50%;
 }
@@ -3766,7 +3766,7 @@
   left: -10%;
   width: 70px;
   height: 70px;
-  background-image: url("../../assets/images/third-team-member-icon.png");
+  background-image: url("./assets/images/third-team-member-icon.png");
   background-repeat: no-repeat;
   background-position: 50%;
 }
@@ -4029,7 +4029,7 @@
   font-family: "Yeseva One";
   color: #fff;
   font-size: 1.1em;
-  background-image: url(../../assets/images/sizes.png);
+  background-image: url(./assets/images/sizes.png);
   background-repeat: no-repeat;
   background-color: #e3b873;
   width: 63px;
@@ -4056,7 +4056,7 @@
   font-family: "Yeseva One";
   color: #fff;
   font-size: 1.1em;
-  background-image: url(../../assets/images/calendar.png);
+  background-image: url(./assets/images/calendar.png);
   background-repeat: no-repeat;
   background-color: #e3b873;
   width: 80px;
@@ -4120,7 +4120,7 @@
   font-family: "Yeseva One";
   color: #fff;
   font-size: 1.1em;
-  background-image: url(../../assets/images/sizes.png);
+  background-image: url(./assets/images/sizes.png);
   background-repeat: no-repeat;
   background-color: #e3b873;
   width: 63px;
@@ -4147,7 +4147,7 @@
   font-family: "Yeseva One";
   color: #fff;
   font-size: 1.1em;
-  background-image: url(../../assets/images/calendar.png);
+  background-image: url(./assets/images/calendar.png);
   background-repeat: no-repeat;
   background-color: #e3b873;
   width: 80px;
@@ -4211,7 +4211,7 @@
   font-family: "Yeseva One";
   color: #fff;
   font-size: 1.1em;
-  background-image: url(../../assets/images/sizes.png);
+  background-image: url(./assets/images/sizes.png);
   background-repeat: no-repeat;
   background-color: #e3b873;
   width: 63px;
@@ -4238,7 +4238,7 @@
   font-family: "Yeseva One";
   color: #fff;
   font-size: 1.1em;
-  background-image: url(../../assets/images/calendar.png);
+  background-image: url(./assets/images/calendar.png);
   background-repeat: no-repeat;
   background-color: #e3b873;
   width: 80px;
@@ -4326,7 +4326,7 @@
 
 .contacts {
   height: 1217px;
-  background-image: url(../../assets/images/contacts-bg.png);
+  background-image: url(./assets/images/contacts-bg.png);
   background-size: 100% calc(100% - 261px);
   background-repeat: no-repeat;
   background-position-y: bottom;
@@ -4734,7 +4734,7 @@
   content: '';
   height: 261px;
   width: 100%;
-  background-image: url(../../assets/images/town.svg);
+  background-image: url(./assets/images/town.svg);
   position: absolute;
   background-repeat: repeat-x;
   background-position-y: bottom;
