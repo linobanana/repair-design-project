@@ -4,6 +4,7 @@
     margin-top: -1px;
     overflow: hidden;
     .wrapper {
+        @include wrapper;
         margin-right: 5%;
         width:  100%;
         @media screen and (max-width: 1024px) {

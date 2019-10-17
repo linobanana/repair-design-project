@@ -1,6 +1,9 @@
 .plan-of-repair {
     height: 720px;
     background-color: $bcg-dark;
+    .wrapper {
+        @include wrapper;
+    }
     .plan-description {
         flex-basis: 40%;
         &__how {

@@ -2,6 +2,7 @@
     height: 755px;
     background-color: $bcg-dark;
     .wrapper {
+        @include wrapper;
         width: 100%;
     }
     .instagram {

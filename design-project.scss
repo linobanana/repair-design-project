@@ -2,6 +2,7 @@
     height: 1075px;
     background: linear-gradient(to bottom, #fff 0%, #fff 58%, #131313 58%, #131313 100%);
     .wrapper {
+        @include wrapper;
         flex-direction: column;
         align-items: center;
         @media screen and (max-width: 426px) {

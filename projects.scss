@@ -3,6 +3,7 @@
     background-color: $bcg-dark;
     position: relative;
     .wrapper {
+        @include wrapper;
         margin-left: 5%;
         width: 100%;
         @media screen and (max-width: 426px){

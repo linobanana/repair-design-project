@@ -5,6 +5,7 @@
     background-size: 100% auto;
     background-color: $bcg-light;
     .wrapper {
+        @include wrapper;
         @media screen and (max-width: 426px) {
             flex-direction: column;
             justify-content: center;
